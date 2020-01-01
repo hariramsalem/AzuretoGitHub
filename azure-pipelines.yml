@@ -24,3 +24,12 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
+
+jobs:
+- job: MyJob
+  displayName: My First Job
+  continueOnError: true
+  workspace:
+    clean: outputs
+  steps:
+  - script: echo My first job
